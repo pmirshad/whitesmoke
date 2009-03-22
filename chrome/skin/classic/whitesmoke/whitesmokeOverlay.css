@@ -1,0 +1,23 @@
+.context-whitesmoke-teXT {
+  list-style-image: url("chrome://whitesmoke/skin/arrow.png");
+}
+
+.context-whitesmoke-diCT {
+  list-style-image: url("chrome://whitesmoke/skin/dict.png");
+}
+
+.context-whitesmoke-bugDB {
+  list-style-image: url("chrome://whitesmoke/skin/bugdb.png");
+}
+
+.context-whitesmoke-aria {
+  list-style-image: url("chrome://whitesmoke/skin/aria.png");
+}
+
+.context-whitesmoke-aru {
+  list-style-image: url("chrome://whitesmoke/skin/aru.png");
+}
+
+.context-whitesmoke-tar {
+  list-style-image: url("chrome://whitesmoke/skin/tar.png");
+}

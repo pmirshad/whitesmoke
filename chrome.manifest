@@ -1,0 +1,12 @@
+# http://developer.mozilla.org/en/docs/Chrome_Registration
+#   - Check this site for the structure and options available for chrome.manifest
+#
+# ** Never forget to put a slash at the end of directories **
+
+content whitesmoke jar:chrome/whitesmoke.jar!/content/whitesmoke/
+
+locale whitesmoke en-US locale/en-US/
+
+skin whitesmoke classic/1.0 jar:chrome/whitesmoke.jar!/skin/classic/whitesmoke/
+
+overlay chrome://browser/content/browser.xul chrome://whitesmoke/content/whitesmokeOverlay.xul

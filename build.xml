@@ -1,0 +1,48 @@
+<?xml version="1.0"?>
+
+<!-- Change the name attribute in the project tag below to
+     your firefox extension name -->
+<project name="whitesmoke" default="clean">
+  <property file="build.properties" />
+  <buildnumber />
+  <tstamp>
+    <format property="TODAY" pattern="yyyyMMdd" />
+  </tstamp>
+  
+  <delete file="../${ant.project.name}-${version}.${TODAY}_b${build.number}-fx.xpi" />
+
+  <target name="createjar">
+    <zip destfile="chrome/${ant.project.name}.jar" basedir="chrome" includes="**" /> 
+  </target>
+
+  <target name="createxpi" depends="createjar,createrdf">
+    <zip destfile="${ant.project.name}-${version}.${TODAY}_b${build.number}-fx.xpi">
+      <zipfileset dir="chrome/" includes="${ant.project.name}.jar" prefix="chrome" />
+      <zipfileset dir="defaults" prefix="defaults" />
+      <zipfileset dir="locale" prefix="locale" />
+      <zipfileset dir="." includes="chrome.manifest" />
+      <zipfileset dir="." includes="Changelog.txt" />
+      <zipfileset dir="." includes="Changelog.nfo" />
+      <zipfileset dir="." includes="install.rdf" />
+      <zipfileset dir="." includes="GPL.txt" />
+    </zip>
+  </target>
+
+  <target name="clean" depends="createxpi">
+    <move file="${ant.project.name}-${version}.${TODAY}_b${build.number}-fx.xpi" todir="../"/>
+    <delete file="chrome/${ant.project.name}.jar" />
+    <delete file="install.rdf" />
+  </target>
+
+  <target name="createrdf">
+    <copy file="templates/install.rdf.tpl.xml"
+          tofile="install.rdf"
+          overwrite="true" >
+          <filterchain>
+            <replacetokens>
+              <token key="VERSION" value="${version}" />
+            </replacetokens>
+          </filterchain>
+    </copy>
+  </target>
+</project>

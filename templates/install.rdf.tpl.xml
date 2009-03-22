@@ -1,0 +1,37 @@
+<?xml version="1.0"?>
+
+<!-- http://www.mozilla.org/projects/firefox/extensions/packaging/extensions.html
+  . Check this site for the structure and options of then install.rdf file -->
+
+<RDF xmlns="http://www.w3.org/1999/02/22-rdf-syntax-ns#"
+  xmlns:em="http://www.mozilla.org/2004/em-rdf#">
+
+  <Description about="urn:mozilla:install-manifest">
+  <!-- Compulsory install.rdf properties -->
+  <!-- Use GUIDGen from http://www.microsoft.com/downloads/details.aspx?
+    FamilyID=94551F58-484F-4A8C-BB39-ADB270833AFC&displaylang=en or
+    the webservice at http://www.guidgen.com to create an id for the extension -->
+    <!-- <em:id>{A38AD7C7-45B7-4bd4-8FC9-93E249F68F8A}</em:id> -->
+    <em:id>whitesmoke@xit0.org</em:id>
+    <em:version>@VERSION@</em:version>
+    <!-- Type of item should be 2 for extensions -->
+    <em:type>2</em:type>
+    <em:name>whiteSmoke</em:name>
+    <em:targetApplication>
+      <Description>
+        <!-- Target Application(Mozilla Firefox in this case) this extension can install into,
+          with minimum and maximum supported versions. -->        
+        <em:id>{ec8030f7-c20a-464f-9b0e-13a3a9e97384}</em:id>
+        <em:minVersion>1.5</em:minVersion>
+        <em:maxVersion>3.0.*</em:maxVersion>
+      </Description>
+    </em:targetApplication>
+
+  <!-- Optional install.rdf Properties -->
+    <em:description>Assorted search options for the context menu</em:description>
+    <em:creator>Irshad Pananilath</em:creator>
+    <em:homepageURL>http://www.xit0.org</em:homepageURL>
+    <em:iconURL>chrome://whitesmoke/skin/icon.png</em:iconURL>
+  </Description>
+
+</RDF>

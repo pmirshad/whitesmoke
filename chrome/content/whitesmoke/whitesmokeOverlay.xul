@@ -1,0 +1,48 @@
+<?xml version="1.0"?>
+
+<!-- The CSS file for this overlay -->
+<?xml-stylesheet href="chrome://whitesmoke/skin/whitesmokeOverlay.css" type="text/css"?>
+
+<!-- The dtd file containing the translatable strings -->
+<!DOCTYPE window SYSTEM "chrome://whitesmoke/locale/whitesmoke.ent">
+
+<overlay id="whitesmoke-Overlay"
+  xmlns="http://www.mozilla.org/keymaster/gatekeeper/there.is.only.xul">
+
+  <!-- The script file containing the actions -->
+  <script type="application/x-javascript" src="whitesmokeOverlay.js"/>
+
+  <popup id="contentAreaContextMenu">
+        <menuitem id="context-whitesmoke-aria"
+            label="&whitesmoke.contextmenu.orcl.aria;"
+            insertafter="context-searchselect"
+            class="menuitem-iconic context-whitesmoke-aria"
+            oncommand="WS.openService('aria');" />
+        <menuitem id="context-whitesmoke-aru"
+            label="&whitesmoke.contextmenu.orcl.aru;"
+            insertafter="context-searchselect"
+            class="menuitem-iconic context-whitesmoke-aru"
+            oncommand="WS.openService('aru');" />
+        <menuitem id="context-whitesmoke-bugDB"
+            label="&whitesmoke.contextmenu.orcl.bugDB;"
+            insertafter="context-searchselect"
+            class="menuitem-iconic context-whitesmoke-bugDB"
+            oncommand="WS.openService('bugDB');" />
+        <menuitem id="context-whitesmoke-tar"
+            label="&whitesmoke.contextmenu.orcl.tar;"
+            insertafter="context-searchselect"
+            class="menuitem-iconic context-whitesmoke-tar"
+            oncommand="WS.openService('tar');" />
+        <menuitem id="context-whitesmoke-diCT"
+            label="&whitesmoke.contextmenu.diCT;"
+            insertafter="context-searchselect"
+            class="menuitem-iconic context-whitesmoke-diCT"
+            oncommand="WS.openService('diCT');" />
+        <menuitem id="context-whitesmoke-teXT"
+            label="&whitesmoke.contextmenu.teXT;"
+            insertafter="context-searchselect"
+            class="menuitem-iconic context-whitesmoke-teXT"
+            oncommand="WS.onteXT();" />
+  </popup>
+
+</overlay>
