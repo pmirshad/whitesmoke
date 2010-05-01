@@ -1,5 +1,10 @@
 whiteSmoke Changelog
 
+v 1.1
+------------------------------------------------------
+x Updated maxVersion to 3.7a5pre for compatibility with the latest Firefox
+  builds
+
 v 0.1
 ------------------------------------------------------
 x Initial Release

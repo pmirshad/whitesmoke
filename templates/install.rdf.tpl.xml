@@ -20,10 +20,12 @@
     <em:targetApplication>
       <Description>
         <!-- Target Application(Mozilla Firefox in this case) this extension can install into,
-          with minimum and maximum supported versions. -->        
+          with minimum and maximum supported versions. -->
         <em:id>{ec8030f7-c20a-464f-9b0e-13a3a9e97384}</em:id>
         <em:minVersion>1.5</em:minVersion>
-        <em:maxVersion>3.6a1pre</em:maxVersion>
+        <!-- Valid application versions for add-on developers
+             https://addons.mozilla.org/en-US/firefox/pages/appversions -->
+        <em:maxVersion>3.7a5pre</em:maxVersion>
       </Description>
     </em:targetApplication>
 
